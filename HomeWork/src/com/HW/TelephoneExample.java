@@ -6,7 +6,7 @@ public class TelephoneExample {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Telephone Telephone = new Telephone("LG전자", "GS-492C");
+		Telephone telephone = new Telephone("LG전자", "GS-492C");
 		Scanner scanner = new Scanner(System.in);
 		int phoneCall = 0;
 		String[] othersSay = {};
@@ -27,9 +27,9 @@ public class TelephoneExample {
 			scanner.close();
 		
 		} else {
-			Telephone.isLampOn(phoneCall, Telephone.isHookSwitch);
-			Telephone.incomingCall(phoneCall);
-			Telephone.hookSwitchCheck(Telephone.isHookSwitch);
+			telephone.isLampOn(phoneCall, telephone.isHookSwitch);
+			telephone.incomingCall(phoneCall);
+			telephone.hookSwitchCheck(telephone.isHookSwitch);
 			
 			System.out.println("-----------------------");
 			System.out.println("'1'입력: 수화기들기");
@@ -37,9 +37,9 @@ public class TelephoneExample {
 			
 			hookReceiver = scanner.nextInt();			
 			if(hookReceiver == 1) {
-				Telephone.callReceiver(hookReceiver);
-				Telephone.outputSound(othersSay);
-				Telephone.inputSound(mySay);
+				telephone.callReceiver(hookReceiver);
+				telephone.outputSound(othersSay);
+				telephone.inputSound(mySay);
 				
 				System.out.println("-----------------------");
 				System.out.println("'1'입력: 스피커폰 버튼 누르기 | 그 외 입력: 수화기 내려놓기");
@@ -48,16 +48,16 @@ public class TelephoneExample {
 				if(speakerOrHook == 1) {
 					pressSpeakerPhoneButton = 1;
 					
-					Telephone.callOffSpeakerPhone(pressSpeakerPhoneButton, hookReceiver);
+					telephone.callOffSpeakerPhone(pressSpeakerPhoneButton, hookReceiver);
 					
 					System.out.println("-----------------------");
 					System.out.println("'1'입력: 스피커폰 버튼 누르기");
 					
 					pressSpeakerPhoneButton += scanner.nextInt();
-					Telephone.callOffSpeakerPhone(pressSpeakerPhoneButton, hookReceiver);
+					telephone.callOffSpeakerPhone(pressSpeakerPhoneButton, hookReceiver);
 				} else {
 					hookReceiver = speakerOrHook;
-					Telephone.callOffSpeakerPhone(pressSpeakerPhoneButton, hookReceiver);
+					telephone.callOffSpeakerPhone(pressSpeakerPhoneButton, hookReceiver);
 				}
 				
 				
