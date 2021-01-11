@@ -1,8 +1,8 @@
-package com.HW;
+package com.hw;
 
 public class Telephone {
 	
-	//ÇÊµå
+	//í•„ë“œ
 	String brand;
 	String model;
 	String receiver;
@@ -15,7 +15,7 @@ public class Telephone {
 	int speakerPhoneButton;
 
 	
-	//»ı¼ºÀÚ
+	//ìƒì„±ì
 	public Telephone() {}
 	
 	public Telephone(String brand, String model) {
@@ -23,21 +23,21 @@ public class Telephone {
 		this.model = model;
 	}
 	
-	//¸Ş¼Òµå
-//	1.ÀüÈ­ ¼ö½Å ·¥ÇÁµî
-	public boolean isLampOn(int phoneCall, boolean isHookSwitch) {		//true°ªÀÏ¶§ Á¡µî °¡Á¤
+	//ë©”ì†Œë“œ
+//	1.ì „í™” ìˆ˜ì‹  ë¨í”„ë“±
+	public boolean isLampOn(int phoneCall, boolean isHookSwitch) {		//trueê°’ì¼ë•Œ ì ë“± ê°€ì •
 		this.isHookSwitch = isHookSwitch;
-		if(!(phoneCall == 1))	{						//ÀüÈ­ ²÷¾îÁ³À» ¶§
+		if(!(phoneCall == 1))	{						//ì „í™” ëŠì–´ì¡Œì„ ë•Œ
 			return false;						
-		} else if(isHookSwitch = false) {			//¼öÈ­±â¸¦ µé¾úÀ» ¶§
+		} else if(isHookSwitch = false) {			//ìˆ˜í™”ê¸°ë¥¼ ë“¤ì—ˆì„ ë•Œ
 			return false;
 		} else {
 			return true;
 		}
 	}
 	
-//	2.ÈÅ½ºÀ§Ä¡ ÀÔ·ÂÈ®ÀÎ
-	public boolean hookSwitchCheck(boolean isHookSwitch) {			//´­·ÁÀÖÀ» ‹š true°ª
+//	2.í›…ìŠ¤ìœ„ì¹˜ ì…ë ¥í™•ì¸
+	public boolean hookSwitchCheck(boolean isHookSwitch) {			//ëˆŒë ¤ìˆì„ Â‹Âš trueê°’
 		this.isHookSwitch = isHookSwitch;
 		if(isHookSwitch = true) {
 			return true;
@@ -46,26 +46,26 @@ public class Telephone {
 		}
 	}
 	
-//	3.¼öÈ­±â Ãâ·Â
+//	3.ìˆ˜í™”ê¸° ì¶œë ¥
 	public String[] outputSound(String[] othersSay) {
 		return othersSay;
 	}
-//	4.¼ÛÈ­±â ÀÔ·Â
+//	4.ì†¡í™”ê¸° ì…ë ¥
 	public String[] inputSound(String[] mySay) {
 		return mySay;
 	}
 	
-//	5.½ºÇÇÄ¿Æù ÀüÈ¯
+//	5.ìŠ¤í”¼ì»¤í° ì „í™˜
 //	public int pressSpeakerPhone(int speakerPhoneButton) {
 //		int num = speakerPhoneButton;
-//		switch(num) {			//¹öÆ° ´©¸¥ È½¼ö
+//		switch(num) {			//ë²„íŠ¼ ëˆ„ë¥¸ íšŸìˆ˜
 //			case 0:
 //				//
 //				return 0;
-//			case 1:			//½ºÇÇÄ¿ÆùÀ¸·Î ÀüÈ¯
+//			case 1:			//ìŠ¤í”¼ì»¤í°ìœ¼ë¡œ ì „í™˜
 //				
 //				return 1;
-//			case 2:			//ÅëÈ­ Á¾·á
+//			case 2:			//í†µí™” ì¢…ë£Œ
 //				
 //				return 2;
 //				
@@ -76,16 +76,16 @@ public class Telephone {
 //		}
 //	}
 	
-//	6.ÀüÈ­¹øÈ£ ÀÔ·Â(ÀüÈ­°É±â)
+//	6.ì „í™”ë²ˆí˜¸ ì…ë ¥(ì „í™”ê±¸ê¸°)
 	public int inputNumber(int pressKeyPad) {
 		return pressKeyPad;
 	}
 	
-//	7.ÀüÈ­¹øÈ£ Ãâ·Â
+//	7.ì „í™”ë²ˆí˜¸ ì¶œë ¥
 	public int outputNumber(int callnumber) {
 		return callnumber;
 	}
-//	8.¼öÈ­±â ³»·Á³õ±â(ÅëÈ­Á¾·á)
+//	8.ìˆ˜í™”ê¸° ë‚´ë ¤ë†“ê¸°(í†µí™”ì¢…ë£Œ)
 	public boolean offTheHookReceiver(boolean isHookSwitch) {
 		this.isHookSwitch = isHookSwitch;
 		if(isHookSwitch = true) {
@@ -94,18 +94,18 @@ public class Telephone {
 			return true;	
 		}
 	}
-//	9.½ºÇÇÄ¿Æù ²ô±â(ÅëÈ­Á¾·á)
+//	9.ìŠ¤í”¼ì»¤í° ë„ê¸°(í†µí™”ì¢…ë£Œ)
 //	public int offTheHookSpeakerPhone(int pressSpeakerPhoneButton) {
 //		
 //		return 0;
 //	}
 //	
-	//Ãâ·Â ¸Ş¼Òµå
+	//ì¶œë ¥ ë©”ì†Œë“œ
 	public void incomingCall(int phoneCall) {
 		if(phoneCall == 1) {
 			System.out.println("------------------------");
-			System.out.println("ÀüÈ­°¡ ¿Ô½À´Ï´Ù.");
-			System.out.println("·¥ÇÁ¿¡ ºÒÀÌ µé¾î¿É´Ï´Ù.");
+			System.out.println("ì „í™”ê°€ ì™”ìŠµë‹ˆë‹¤.");
+			System.out.println("ë¨í”„ì— ë¶ˆì´ ë“¤ì–´ì˜µë‹ˆë‹¤.");
 		} else {
 			//
 		}
@@ -114,27 +114,27 @@ public class Telephone {
 	public void callReceiver(int hookReceiver) {
 		System.out.println("------------------------");
 		if(hookReceiver == 1) {
-			System.out.println("¼öÈ­±â¸¦ µé¾ú½À´Ï´Ù");
-			System.out.println("ÅëÈ­¸¦ ½ÃÀÛÇÕ´Ï´Ù");
+			System.out.println("ìˆ˜í™”ê¸°ë¥¼ ë“¤ì—ˆìŠµë‹ˆë‹¤");
+			System.out.println("í†µí™”ë¥¼ ì‹œì‘í•©ë‹ˆë‹¤");
 		} else if(hookReceiver == 2) {
-			System.out.println("ÅëÈ­¸¦ °ÅÀıÇß½À´Ï´Ù");
-			System.out.println("Á¾·á");
+			System.out.println("í†µí™”ë¥¼ ê±°ì ˆí–ˆìŠµë‹ˆë‹¤");
+			System.out.println("ì¢…ë£Œ");
 		} else {
-			System.out.println("¼öÈ­±â¸¦ ³»·Á³õ¾Ò½À´Ï´Ù");
-			System.out.println("ÅëÈ­¸¦ Á¾·áÇÕ´Ï´Ù");
+			System.out.println("ìˆ˜í™”ê¸°ë¥¼ ë‚´ë ¤ë†“ì•˜ìŠµë‹ˆë‹¤");
+			System.out.println("í†µí™”ë¥¼ ì¢…ë£Œí•©ë‹ˆë‹¤");
 		}
 	}
 	
 	public void callOffSpeakerPhone(int speakerPhoneButton, int hookReceiver) {
 		System.out.println("------------------------");
 		if(speakerPhoneButton == 1 && hookReceiver == 1) {
-			System.out.println("½ºÇÇÄ¿ÆùÀ¸·Î ÀüÈ¯ÇÕ´Ï´Ù");
+			System.out.println("ìŠ¤í”¼ì»¤í°ìœ¼ë¡œ ì „í™˜í•©ë‹ˆë‹¤");
 		} else if(speakerPhoneButton == 1) {
-			System.out.println("½ºÇÇÄ¿ÆùÀ¸·Î ÀüÈ­¸¦ ¹Ş¾Ò½À´Ï´Ù");
-			System.out.println("ÅëÈ­¸¦ ½ÃÀÛÇÕ´Ï´Ù");	
+			System.out.println("ìŠ¤í”¼ì»¤í°ìœ¼ë¡œ ì „í™”ë¥¼ ë°›ì•˜ìŠµë‹ˆë‹¤");
+			System.out.println("í†µí™”ë¥¼ ì‹œì‘í•©ë‹ˆë‹¤");	
 		} else if(speakerPhoneButton == 2) {
-			System.out.println("½ºÇÇÄ¿ÆùÀ» Á¾·áÇÏ¿´½À´Ï´Ù");
-			System.out.println("ÅëÈ­¸¦ Á¾·áÇÕ´Ï´Ù");				
+			System.out.println("ìŠ¤í”¼ì»¤í°ì„ ì¢…ë£Œí•˜ì˜€ìŠµë‹ˆë‹¤");
+			System.out.println("í†µí™”ë¥¼ ì¢…ë£Œí•©ë‹ˆë‹¤");				
 		} else {
 			//
 		}
