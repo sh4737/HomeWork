@@ -1,4 +1,4 @@
-package com.HW;
+package com.hw;
 
 import java.util.Scanner;
 
@@ -6,24 +6,24 @@ public class TelephoneExample {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Telephone telephone = new Telephone("LGÀüÀÚ", "GS-492C");
+		Telephone telephone = new Telephone("LGì „ì", "GS-492C");
 		Scanner scanner = new Scanner(System.in);
 		int phoneCall = 0;
 		String[] othersSay = {};
 		String[] mySay = {};
 		int pressSpeakerPhoneButton = 0;
-//		int pressKeyPad;		// ¹Ì±¸Çö
-//		int callnumber;			// ¹Ì±¸Çö
+//		int pressKeyPad;		// ë¯¸êµ¬í˜„
+//		int callnumber;			// ë¯¸êµ¬í˜„
 		int hookReceiver = 0;
 		
 		
 		System.out.println("-----------------------");
-		System.out.println("ÀüÈ­¸¦ ¿¬°áÇÏ·Á¸é '1'À» ÀÔ·ÂÇØÁÖ¼¼¿ä");
-		System.out.println("Á¾·áÇÏ·Á¸é '0'À» ÀÔ·ÂÇØÁÖ¼¼¿ä");
+		System.out.println("ì „í™”ë¥¼ ì—°ê²°í•˜ë ¤ë©´ '1'ì„ ì…ë ¥í•´ì£¼ì„¸ìš”");
+		System.out.println("ì¢…ë£Œí•˜ë ¤ë©´ '0'ì„ ì…ë ¥í•´ì£¼ì„¸ìš”");
 		phoneCall = scanner.nextInt();
 		
 		if(phoneCall == 0) {
-			System.out.println("Á¾·á");
+			System.out.println("ì¢…ë£Œ");
 			scanner.close();
 		
 		} else {
@@ -32,8 +32,8 @@ public class TelephoneExample {
 			telephone.hookSwitchCheck(telephone.isHookSwitch);
 			
 			System.out.println("-----------------------");
-			System.out.println("'1'ÀÔ·Â: ¼öÈ­±âµé±â");
-			System.out.println("'2'ÀÔ·Â: ÀüÈ­ °ÅÀı");
+			System.out.println("'1'ì…ë ¥: ìˆ˜í™”ê¸°ë“¤ê¸°");
+			System.out.println("'2'ì…ë ¥: ì „í™” ê±°ì ˆ");
 			
 			hookReceiver = scanner.nextInt();			
 			if(hookReceiver == 1) {
@@ -42,7 +42,7 @@ public class TelephoneExample {
 				telephone.inputSound(mySay);
 				
 				System.out.println("-----------------------");
-				System.out.println("'1'ÀÔ·Â: ½ºÇÇÄ¿Æù ¹öÆ° ´©¸£±â | ±× ¿Ü ÀÔ·Â: ¼öÈ­±â ³»·Á³õ±â");
+				System.out.println("'1'ì…ë ¥: ìŠ¤í”¼ì»¤í° ë²„íŠ¼ ëˆ„ë¥´ê¸° | ê·¸ ì™¸ ì…ë ¥: ìˆ˜í™”ê¸° ë‚´ë ¤ë†“ê¸°");
 				
 				int speakerOrHook = scanner.nextInt();
 				if(speakerOrHook == 1) {
@@ -51,7 +51,7 @@ public class TelephoneExample {
 					telephone.callOffSpeakerPhone(pressSpeakerPhoneButton, hookReceiver);
 					
 					System.out.println("-----------------------");
-					System.out.println("'1'ÀÔ·Â: ½ºÇÇÄ¿Æù ¹öÆ° ´©¸£±â");
+					System.out.println("'1'ì…ë ¥: ìŠ¤í”¼ì»¤í° ë²„íŠ¼ ëˆ„ë¥´ê¸°");
 					
 					pressSpeakerPhoneButton += scanner.nextInt();
 					telephone.callOffSpeakerPhone(pressSpeakerPhoneButton, hookReceiver);
