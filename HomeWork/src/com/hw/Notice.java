@@ -13,4 +13,10 @@ public class Notice extends GeneralForum {
 	public void copyToNotice() {
 		
 	}
+	
+	//3. 공지글 올리기
+	@Override
+	public void newpost() {
+		
+	}
 }

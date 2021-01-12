@@ -34,5 +34,10 @@ public class GeneralForum {
 	public void sortByLikes() {
 		
 	}
+	
+	//7. 게시글 올리기
+	public void newpost() {
+		
+	}
 
 }
